@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-green: #00FF87;
+  --color-electric-blue: #0096FF;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 30, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 135, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 135, 0.6);
+}
+
+/* Glassmorphism custom global configurations */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Pulse animation for decorative circles */
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.15;
+  }
+  33% {
+    transform: scale(1.1) translate(30px, -20px);
+    opacity: 0.25;
+  }
+  66% {
+    transform: scale(0.9) translate(-20px, 15px);
+    opacity: 0.2;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 20s infinite ease-in-out;
+}
+
+@keyframes pulse-slow-reverse {
+  0%, 100% {
+    transform: scale(1) translate(0px, 0px);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(0.85) translate(-40px, 30px);
+    opacity: 0.2;
+  }
+}
+
+.animate-pulse-slow-reverse {
+  animation: pulse-slow-reverse 18s infinite ease-in-out;
+}
+

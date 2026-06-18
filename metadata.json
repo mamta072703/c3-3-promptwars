@@ -1,0 +1,6 @@
+{
+  "name": "EcoPulse",
+  "description": "An interactive, premium carbon footprint tracker and awareness platform customized for various lifestyles & Indian contexts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
